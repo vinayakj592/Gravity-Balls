@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bounce Ball</title>
+</head>
+<body class = "bg-black">
+    <div class = "flex h-screen">
+        <div class="w-2/5 flex flex-col items-center">
+                <h1 class="mb-32 mt-16 text-6xl font-sans font-semibold leading-none text-sky-200 " 
+                style="text-shadow:
+                0 0 6px rgba(202,228,225,0.92),
+                0 0 30px rgba(202,228,225,0.34),
+                0 0 12px rgba(30,132,242,0.52),
+                0 0 21px rgba(30,132,242,0.92),
+                0 0 34px rgba(30,132,242,0.78),
+                0 0 54px rgba(30,132,242,0.92);">Gravity Balls</h1>
+            <div class=" flex flex-col p-5 w-4/5 h-fit justify-center text-sky-200 border rounded-lg border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
+                <div class=" flex justify-between mt-5 mb-5">
+                    <h1 class = "text-sky-400 font-bold text-xl"> Gravity:</h1>
+                    <input id = "gravity" class="w-36 text-center text-lg font-bold tracking-tight p-0 bg-sky-200 focus:outline-sky-400 focus:ring-0 rounded-lg text-blue-800" type="number" value="9.8">
+                </div>
+                <div class="flex justify-between mb-5">
+                    <h1 class = "text-sky-400 font-bold text-xl">Coefficient of Restitution:</h1>
+                    <input id = "restitution" class="w-36 text-center text-lg font-bold tracking-tight p-0 bg-sky-200 focus:outline-sky-400 focus:ring-0 rounded-lg text-blue-800" type="number" value="0.8">
+                </div>
+                <div class="flex justify-between mb-10">
+                    <h1 class = "text-sky-400 font-bold text-xl">Air Drag:</h1>
+                    <input id = "drag" class="w-36 text-center text-lg font-bold tracking-tight p-0 bg-sky-200 focus:outline-sky-400 focus:ring-0 rounded-lg text-blue-800" type="number" value="0.47">
+                </div>
+                <div class="flex justify-evenly mb-5">
+                    <button type="button" id="restart" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-3xl text-sm px-5 py-2.5 text-center">Restart</button>
+                    <button type="button" id="play" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-3xl text-sm px-5 py-2.5 text-center">Play</button>
+                    <button type="button" id="pause" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-3xl text-sm px-5 py-2.5 text-center">Pause</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-3/5 flex flex-col items-center justify-between">
+            <div id="ball" class=" mt-16 h-16 w-16 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
+            </div>
+            <div id="line" class=" mb-16 h-4 w-48 rounded-md bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
